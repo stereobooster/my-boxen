@@ -74,11 +74,6 @@ GITHUBTARBALL
     java (1.5.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-nginx
-  specs:
-    nginx (1.4.3)
-
-GITHUBTARBALL
   remote: boxen/puppet-nodejs
   specs:
     nodejs (3.7.0)
@@ -193,6 +188,11 @@ GITHUBTARBALL
   specs:
     module-data (0.0.3)
 
+GITHUBTARBALL
+  remote: stereobooster/puppet-nginx
+  specs:
+    nginx (1.4.7.1)
+
 DEPENDENCIES
   alfred (= 1.1.8)
   boxen (= 3.4.2)
@@ -211,7 +211,7 @@ DEPENDENCIES
   iterm2 (= 1.0.4)
   java (= 1.5.0)
   module-data (= 0.0.3)
-  nginx (= 1.4.3)
+  nginx (= 1.4.7.1)
   nodejs (= 3.7.0)
   openoffice (= 1.2.0)
   openssl (= 1.0.0)

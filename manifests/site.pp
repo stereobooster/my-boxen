@@ -56,7 +56,7 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
+  # include nginx
 
   #include pow
   include postgresql
@@ -80,8 +80,8 @@ node default {
   }
 
   ruby::gem { 'bundler for all rubies':
-    gem          => 'bundler',
-    ruby => '*'
+    gem  => 'bundler',
+    ruby => '2.1.1'
   }
 
   # common, useful packages
