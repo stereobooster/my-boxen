@@ -94,6 +94,11 @@ GITHUBTARBALL
     osx (2.2.2)
 
 GITHUBTARBALL
+  remote: boxen/puppet-osxfuse
+  specs:
+    osxfuse (1.3.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-phantomjs
   specs:
     phantomjs (2.3.0)
@@ -205,6 +210,7 @@ DEPENDENCIES
   openoffice (= 1.2.0)
   openssl (= 1.0.0)
   osx (= 2.2.2)
+  osxfuse (= 1.3.0)
   phantomjs (= 2.3.0)
   pkgconfig (= 1.0.0)
   postgresql (= 3.0.0)

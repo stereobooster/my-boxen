@@ -25,4 +25,29 @@ class people::stereobooster {
     source  => 'stereobooster/dotfiles',
     require => File[$my]
   }
+
+  exec { "install oh-my-zsh":
+    command => "curl -L http://install.ohmyz.sh | sh",
+    path    => "/usr/bin/:/bin/"
+  }
+
+  exec { "install dotfiles":
+    command => "${my}/dotfiles/install.sh",
+    path    => "/usr/bin/"
+  }
+
+  $source = 'http://macapps.mooregreatsoftware.com.s3.amazonaws.com/TrueCrypt-7.1a-OSX.dmg'
+
+  package { 'TrueCrypt':
+    source   => $source,
+    provider => 'pkgdmg',
+    require  => Package['osxfuse'],
+  }
+
+  if ! defined(Package['osxfuse']) {
+    package { 'osxfuse':
+      provider => 'homebrew',
+    }
+  }
+
 }
