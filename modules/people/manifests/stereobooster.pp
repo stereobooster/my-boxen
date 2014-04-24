@@ -12,6 +12,7 @@ class people::stereobooster {
   include caffeine
   include alfred
   include skitch
+  include imagemagick
 
   $home     = "/Users/${::boxen_user}"
   $my       = "${home}/my"
@@ -41,13 +42,27 @@ class people::stereobooster {
   package { 'TrueCrypt':
     source   => $source,
     provider => 'pkgdmg',
-    require  => Package['osxfuse'],
+    require  => Package['osxfuse']
   }
 
   if ! defined(Package['osxfuse']) {
     package { 'osxfuse':
-      provider => 'homebrew',
+      provider => 'homebrew'
     }
   }
 
+  # TODO move to project
+
+  package { 'taglib':
+    provider => 'homebrew'
+  }
+
+  package { 'sphinx':
+    provider => 'homebrew'
+  }
+
+  ruby::gem { "passenger":
+    gem     => 'passenger',
+    ruby    => '2.1.1'
+  }
 }

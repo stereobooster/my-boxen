@@ -58,7 +58,7 @@ node default {
   include hub
   include nginx
 
-  include pow
+  #include pow
   include postgresql
 
   # fail if FDE is not enabled
@@ -70,10 +70,19 @@ node default {
   include nodejs::v0_10
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.0': }
-  ruby::version { '2.1.1': }
+  #ruby::version { '1.9.3': }
+  #ruby::version { '2.0.0': }
+  #ruby::version { '2.1.0': }
+  #ruby::version { '2.1.1': }
+
+  class { 'ruby::global':
+    version => '2.1.1'
+  }
+
+  ruby::gem { 'bundler for all rubies':
+    gem          => 'bundler',
+    ruby => '*'
+  }
 
   # common, useful packages
   package {
