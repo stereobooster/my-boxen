@@ -80,9 +80,9 @@ node default {
     version => '2.1.1'
   }
 
-  ruby::gem { 'bundler for all rubies':
+  ruby_gem { 'bundler for all rubies':
     gem  => 'bundler',
-    ruby => '2.1.1'
+    ruby_version => '2.1.1'
   }
 
   # common, useful packages
