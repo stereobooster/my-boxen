@@ -84,11 +84,6 @@ GITHUBTARBALL
     nginx (1.4.6)
 
 GITHUBTARBALL
-  remote: boxen/puppet-nodejs
-  specs:
-    nodejs (5.0.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-openoffice
   specs:
     openoffice (1.2.0)
@@ -193,6 +188,11 @@ GITHUBTARBALL
   specs:
     module_data (0.0.4)
 
+GITHUBTARBALL
+  remote: stereobooster/puppet-nodejs
+  specs:
+    nodejs (5.0.4)
+
 DEPENDENCIES
   alfred (= 1.1.8)
   boxen (= 3.11.0)
@@ -213,7 +213,7 @@ DEPENDENCIES
   java (= 1.5.0)
   module_data (= 0.0.4)
   nginx (= 1.4.6)
-  nodejs (= 5.0.0)
+  nodejs (= 5.0.4)
   openoffice (= 1.2.0)
   openssl (= 1.0.0)
   osx (= 2.2.2)

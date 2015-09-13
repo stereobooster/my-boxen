@@ -69,8 +69,9 @@ node default {
   nodejs::version { '0.10': }
   nodejs::version { '0.12': }
   nodejs::version { 'iojs-1.6.2': }
+  nodejs::version { 'iojs-3.3.0': }
 
-  $default_version = 'iojs-1.6.2'
+  $default_version = 'iojs-3.3.0'
 
   class { 'nodejs::global':
     version => $default_version
