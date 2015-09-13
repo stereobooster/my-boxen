@@ -164,11 +164,6 @@ GITHUBTARBALL
     sysctl (1.0.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-utorrent
-  specs:
-    utorrent (1.1.1)
-
-GITHUBTARBALL
   remote: boxen/puppet-vlc
   specs:
     vlc (1.1.0)
@@ -235,7 +230,6 @@ DEPENDENCIES
   sublime_text_2 (= 1.1.2)
   sudo (= 1.0.0)
   sysctl (= 1.0.1)
-  utorrent (= 1.1.1)
   vlc (= 1.1.0)
   xquartz (= 1.2.1)
   zsh (= 1.0.0)

@@ -4,7 +4,7 @@ class people::stereobooster {
   include iterm2::stable
   include sublime_text_2
   include zsh
-  include utorrent
+  # include utorrent
   include java
   include chrome
   include vlc
@@ -53,12 +53,12 @@ class people::stereobooster {
 
   # TODO move to project
 
-  package { 'taglib':
-    provider => 'homebrew'
-  }
+  # package { 'taglib':
+  #   provider => 'homebrew'
+  # }
 
-  package { 'sphinx':
-    provider => 'homebrew'
-  }
+  # package { 'sphinx':
+  #   provider => 'homebrew'
+  # }
 
 }

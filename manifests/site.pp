@@ -57,8 +57,7 @@ node default {
   include git
   include hub
   # include nginx
-
-  #include pow
+  # include pow
   include postgresql
 
   # fail if FDE is not enabled
@@ -67,13 +66,41 @@ node default {
   }
 
   # node versions
-  nodejs::version { 'v0.10': }
+  nodejs::version { '0.10': }
+  nodejs::version { '0.12': }
+  nodejs::version { 'iojs-1.6.2': }
+
+  $default_version = 'iojs-1.6.2'
+
+  class { 'nodejs::global':
+    version => $default_version
+  }
+
+  npm_module { "npm for $default_version":
+    module       => 'npm',
+    version      => '>= 2.14.3',
+    node_version => $default_version,
+  }
+
+  npm_module { "node-gyp for $default_version":
+    module       => 'node-gyp',
+    version      => '>= 3.0.2',
+    node_version => $default_version,
+  }
+
+  npm_module { "bower for $default_version":
+    module       => 'bower',
+    version      => '>= 1.5.2',
+    node_version => $default_version,
+  }
+
+  npm_module { "gulp for $default_version":
+    module       => 'gulp',
+    version      => '>= 3.9.0',
+    node_version => $default_version,
+  }
 
   # default ruby versions
-  #ruby::version { '1.9.3': }
-  #ruby::version { '2.0.0': }
-  #ruby::version { '2.1.0': }
-  #ruby::version { '2.1.2': }
   ruby::version { '2.1.1': }
   ruby::version { '2.2.0': }
   ruby::version { '2.2.2': }
