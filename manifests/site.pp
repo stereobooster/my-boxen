@@ -66,6 +66,7 @@ node default {
   }
 
   # node versions
+
   nodejs::version { '0.10': }
   nodejs::version { '0.12': }
   # TODO: update to 5.1.0
