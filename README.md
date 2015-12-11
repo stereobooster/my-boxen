@@ -16,6 +16,8 @@ Where it is: `/opt/boxen/repo`
 
 Install: `./script/boxen`
 
+Check outdated: `librarian-puppet outdated`
+
 # Our Boxen
 
 This is a template Boxen project designed for your organization to fork and
