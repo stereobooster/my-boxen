@@ -62,17 +62,16 @@ node default {
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
-   fail('Please enable full disk encryption and try again')
+    fail('Please enable full disk encryption and try again')
   }
 
   # node versions
 
   nodejs::version { '0.10': }
   nodejs::version { '0.12': }
-  # TODO: update to 5.1.0
-  nodejs::version { '4.0.0': }
+  nodejs::version { '6.1.0': }
 
-  $default_version = '4.0.0'
+  $default_version = '6.1.0'
 
   class { 'nodejs::global':
     version => $default_version

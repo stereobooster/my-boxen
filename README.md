@@ -1,5 +1,6 @@
 # TODO
 * install oh-my-zsh via boxen
+* set `GITHUB_API_TOKEN` for librerian
 
 # FAQ
 
