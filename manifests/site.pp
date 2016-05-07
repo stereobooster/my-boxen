@@ -62,7 +62,7 @@ node default {
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
+   fail('Please enable full disk encryption and try again')
   }
 
   # node versions
@@ -92,13 +92,13 @@ node default {
 
   npm_module { "bower for $default_version":
     module       => 'bower',
-    version      => '>= 1.5.2',
+    version      => '>= 1.7.2',
     node_version => $default_version,
   }
 
   npm_module { "gulp for $default_version":
-    module       => 'gulp',
-    version      => '>= 3.9.0',
+    module       => 'gulp-cli',
+    version      => '>= 1.2.1',
     node_version => $default_version,
   }
 

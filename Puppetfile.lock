@@ -1,9 +1,4 @@
 GITHUBTARBALL
-  remote: boxen/puppet-alfred
-  specs:
-    alfred (1.5.0)
-
-GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.11.1)
@@ -194,7 +189,6 @@ GITHUBTARBALL
     module_data (0.0.4)
 
 DEPENDENCIES
-  alfred (= 1.5.0)
   boxen (= 3.11.1)
   brewcask (= 0.0.6)
   caffeine (= 1.0.0)

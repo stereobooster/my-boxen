@@ -10,7 +10,7 @@ class people::stereobooster {
   include vlc
   include openoffice
   include caffeine
-  include alfred
+  # include alfred
   include skitch
   include imagemagick
 
