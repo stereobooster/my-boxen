@@ -1,6 +1,6 @@
 require boxen::environment
 require homebrew
-require gcc
+/* require gcc */
 
 Exec {
   group       => 'staff',
@@ -102,18 +102,7 @@ node default {
   }
 
   # default ruby versions
-  ruby::version { '2.1.1': }
-  ruby::version { '2.2.0': }
-  ruby::version { '2.2.2': }
-
-  class { 'ruby::global':
-    version => '2.2.2'
-  }
-
-  ruby_gem { 'bundler for all rubies':
-    gem  => 'bundler',
-    ruby_version => '*',
-  }
+  ruby::version { '2.4.1': }
 
   # common, useful packages
   package {

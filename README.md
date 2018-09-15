@@ -4,7 +4,7 @@
 
 # FAQ
 
-##upgrading boxen
+## upgrading boxen
 See [FAQ-Upgrading](https://github.com/boxen/our-boxen/blob/master/docs/faq.md#q-how-do-you-upgrade-your-boxen-from-the-public-our-boxen).
 
 ```
@@ -322,6 +322,9 @@ we'll fork it under the Boxen org and give you read+write access to our
 fork.
 You'll still be the maintainer, you'll still own the issues and PRs.
 It'll just be listed under the boxen org so folks can find it more easily.
+
+## upgrading boxen
+See [FAQ-Upgrading](https://github.com/boxen/our-boxen/blob/master/docs/faq.md#q-how-do-you-upgrade-your-boxen-from-the-public-our-boxen).
 
 ## Integrating with Github Enterprise
 
